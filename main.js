@@ -48,7 +48,7 @@ function Books(title, author, pages, read){
     this.pages=pages
     this.read=read
     this.info = ()=>{ 
-        let text = '<h1>' + title + '</h1>' + ' <br />' + '<h2>' + author + '</h2>' + ' <br />' + '<h3>' + pages + '</h3>' + '<button class="reader">' + read + '</button>'
+        let text = '<h1>' + title + '</h1>' + ' <br />' + '<h2>' + author + '</h2>' + ' <br />' + '<h3>' + pages + '</h3>' + '<button class="reader" id="reader">' + read + '</button>'
       return text
     }
    return this.info()   
@@ -94,12 +94,6 @@ function getRandomColor() {
 function storeBook(e){
     e.preventDefault()
     disp()
-    function Obj(title, author, pages, read){
-        this.title=title
-        this.author=author
-        this.pages=pages
-        this.read=read
-    }
     function Objtwo(title, author, pages, read){
         this.title=title
         this.author=author
@@ -131,18 +125,13 @@ function storeBook(e){
         
         
         function Reader(e){
-        console.log(e)
-                if(Read.innerHTML === Books.prototype.readStatus){
-                    //console.log(Read.innerHTML === Obj.prototype.readStatus)
-                    console.log(Object.getPrototypeOf(Books.prototype))
-                    Object.setPrototypeOf(Books.prototype, Objtwo.prototype)
-                    console.log(Object.getPrototypeOf(Books.prototype))
-                    console.log(Books.prototype)
-                    Read.innerHTML = Books.prototype.yesRead
-                }
-                else
-                //Object.setPrototypeOf(Books.prototype, Obj.prototype)
-                Read.innerHTML = Books.prototype.readStatus
+            if(Read.innerHTML === Books.prototype.readStatus){
+                Object.setPrototypeOf(Books.prototype, Objtwo.prototype)
+                Read.innerHTML = Books.prototype.yesRead
+            }
+            else
+            //Object.setPrototypeOf(Books.prototype, Obj.prototype)
+            Read.innerHTML = Books.prototype.readStatus
         }
         let Read = document.querySelector(".reader")
         Read.addEventListener('click', Reader)
