@@ -52,7 +52,7 @@
   margin: 0 0 0 17%;
   min-height: 100vh;
   align-content: center;
-  border: 3px solid rgb(241, 6, 6);
+  border: 1px solid black;
   border-bottom: none;
   border-left: none;
 }
@@ -63,14 +63,12 @@
 #top{
   display: flex;
   justify-content: space-between;
-  border: 1px solid rgb(237, 214, 9);
 }
 #accounts{
   display: flex;
   align-items: center;
   gap: 1em;
   margin-right: 0.8em;
-  border: 1px solid black;
 }
 @media (max-width: 800px) {
   #top {
@@ -117,7 +115,6 @@ ul li::before {
   row-gap: 3.75em;
   justify-items: center;
   margin-top: 5em;
-  border: 3px solid orange;
 }
 @media only screen and (max-width: 1024px){
   #shelf{
