@@ -17,8 +17,6 @@
 *{
   box-sizing: border-box;
   padding: 0;
-  margin: ;
-
 }
 
 #app {
@@ -34,7 +32,6 @@
     background-color: white;
   }
 }
-
 #disp {
   position: absolute;
   text-align: justify;
@@ -84,6 +81,7 @@
   border-radius: 0.5em;
   border: 0.2em solid black;
   outline: none;
+  font-size: large;
 }
 #btn1:hover, #btn2:hover, .press:hover{
   border-color: #fff;
@@ -129,6 +127,16 @@ ul li::before {
 @media only screen and (max-width: 536px){
   #shelf{
     grid-template-columns: repeat(1, 1fr);
+  }
+  #disp{
+    width: 0%;
+  }
+  #disp > h1, #disp > #lists{
+    display: none;
+  } 
+  #main{
+    margin: 0 0 0 0;
+    border-left: 1px solid black;
   }
 }
 .book{
