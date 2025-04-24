@@ -2,7 +2,7 @@ import './style.css'
 
 document.querySelector('#app').innerHTML = `
 <div>
-<nav id='disp'><h1>Book Shelf</h1><ul id='lists'></ul></nav>
+<nav id='disp'><h1>Book Titles</h1><ul id='lists'></ul></nav>
 <div id='main'>
 <div id='top'>
 <h1 id='lib'>The Library</h1> 
@@ -75,7 +75,7 @@ function disp(){
         }
             bigdiv.appendChild(smalldiv)
             
-            //Add book title to bookshelf from the dialog form if Addbook has no entry
+            //Add title to book titles from the dialog form if Addbook has no entry
             smalldiv.innerHTML = Arr[i]
             smalldiv.setAttribute('id', Arr[i])
             console.log(bigdiv.innerHTML)
@@ -123,19 +123,19 @@ function storeBook(e){
 
         smalldiv2.style.backgroundColor = getRandomColor()
         
-        
+        if(bigdivsec.childElementCount >= 1){
         function Reader(e){
-            if(Read.innerHTML === Books.prototype.readStatus){
+            //let Read2 = document.querySelector(".reader")
+            if(e.target.innerHTML === Books.prototype.readStatus){
                 Object.setPrototypeOf(Books.prototype, Objtwo.prototype)
-                Read.innerHTML = Books.prototype.yesRead
+                e.target.innerHTML = Books.prototype.yesRead
             }
             else
             //Object.setPrototypeOf(Books.prototype, Obj.prototype)
-            Read.innerHTML = Books.prototype.readStatus
+            e.target.innerHTML = Books.prototype.readStatus
         }
-        let Read = document.querySelector(".reader")
-        Read.addEventListener('click', Reader)
-        
+        let Read = document.querySelectorAll(".reader")
+        Read.forEach(button => button.addEventListener('click', Reader))}
     //Remove book from the main page and bookshelf
         function removeBook(e){
             console.log(e)
