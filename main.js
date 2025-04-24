@@ -5,7 +5,8 @@ document.querySelector('#app').innerHTML = `
 <nav id='disp'><h1>Book Titles</h1><ul id='lists'></ul></nav>
 <div id='main'>
 <div id='top'>
-<h1 id='lib'>The Library</h1> 
+<h2 id='lib'>create a list of Books to read </h2>
+<h1 id='lib'>My To Read Library</h1>  
 <div id='accounts'>
 <button id='btn1'>Log In</button>
 <button id='btn2'>Create Account</button>
