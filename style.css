@@ -52,6 +52,10 @@
   border: 1px solid black;
   border-bottom: none;
   border-left: none;
+  background-color: aliceblue;
+}
+#note{
+  margin-bottom: 80px;
 }
 #lib{
   margin-left: 30%;
@@ -60,7 +64,7 @@
 #top{
   display: flex;
   justify-content: space-between;
-  background-color:aliceblue;
+  background-color:lemonchiffon;
 }
 #accounts{
   display: flex;
@@ -74,6 +78,9 @@
     align-items: center;
     margin-bottom: 1em;
   }
+}
+.press{
+  margin-top: 15px;
 }
 #btn1, #btn2, .press{
   cursor: pointer;
