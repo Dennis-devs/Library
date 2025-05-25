@@ -5,7 +5,7 @@
   --light: 70;
   --threshold:50;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
   background-color: #242424;
 
   font-synthesis: none;
@@ -52,7 +52,7 @@
   border: 1px solid black;
   border-bottom: none;
   border-left: none;
-  background-color: aliceblue;
+  background-color: rgb(155, 191, 222);
 }
 #note{
   margin-bottom: 80px;
@@ -64,7 +64,7 @@
 #top{
   display: flex;
   justify-content: space-between;
-  background-color:lemonchiffon;
+  background-color:rgb(233, 214, 49);
 }
 #accounts{
   display: flex;
