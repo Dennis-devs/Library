@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Library/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>{% block title %}Default Value{% endblock %}</title>
+    <script type="module" crossorigin src="/Library/assets/index-3cccd6a1.js"></script>
+    <link rel="stylesheet" href="/Library/assets/index-979929ad.css">
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div id="app">
+      <nav id="disp">
+        <h1>Book Titles</h1>
+        <ul id="lists"></ul>
+      </nav>
+      <div id="main">
+        <h3 id="note">Create a Library of your To-Read Books</h3>
+        <div id="top">
+          <h1 id="lib">My To-Read Library</h1>
+          <div id="accounts">
+            <button id="btn1">About</button>
+            <button id="btn2">Book Suggestions</button>
+          </div>
+        </div>
+        <form method="get" action="{{ url_for('indexform') }}">
+          <button class="press" id="press" type="submit">Add Book</button>
+        </form>
+        <div id="shelf">
+
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+    {% endblock %} 
+  </body>
+</html>

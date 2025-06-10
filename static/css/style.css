@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,6 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -24,7 +26,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  border: 1px solid rgb(231, 62, 62);
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -78,6 +79,9 @@
     align-items: center;
     margin-bottom: 1em;
   }
+  #lib {
+    margin-left: 5%;
+  }
 }
 .press{
   margin-top: 15px;
@@ -94,8 +98,10 @@
 #btn1:hover, #btn2:hover, .press:hover{
   border-color: #fff;
   box-shadow: 0.625rem 0.625rem 0.9375rem 0.125rem yellow inset;
+  text-transform: scale(1.2);
+  
+  
 }
-
 .inner{
   cursor: pointer;
   background-color: darkseagreen;
@@ -114,7 +120,6 @@ ul li::before {
   width: 1.5em;
   margin-left: -2em;
 }
-
 #shelf{
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1,0 +1,87 @@
+{% extends "indexOne.html" %} {% block title %}Form Window{% endblock %} {%
+block head %}
+<link rel="stylesheet" href="/css/form.css" />
+{{ super() }} 
+{% endblock %} 
+{% block content %} 
+{{ super() }}
+<!-- <div id="main">
+  <h1 id="title" style="text-align: center">Book Entry</h1>
+  <p id="description" style="text-align: center">
+    <i>The following are book quotes from an API</i>
+  </p> -->
+<main id="mains">
+  <section id="modals">
+    <button class="close-btn">X</button>
+    <form
+      id="survey-form"
+      ,
+      name="formz"
+      ,
+      action="{{ url_for('indexform') }}"
+      ,
+      method="post"
+    >
+      <br />
+      <div id="body" style="background-color: rgba(25, 33, 57, 0.9)">
+        <label id="name-label" for="name">Book Title</label> <br />
+        <input
+          type="text"
+          required
+          id="name"
+          class="title"
+          placeholder="Enter book title"
+          name="name"
+        />
+        <br />
+        <label id="author-label">Author</label> <br />
+        <input
+          type="text"
+          required
+          id="author"
+          class="author"
+          placeholder="Enter author name"
+          name="author"
+        />
+        <br />
+        <label id="number-label">Number of Pages (optional)</label> <br />
+        <input
+          type="number"
+          id="pages"
+          class="pages"
+          placeholder="Pages"
+          name="pages"
+          min="10"
+          max="1000"
+        />
+        <br />
+        <label for="genre">Which genre best describes the book?</label>
+        <br />
+        <select id="dropdown" name="genre" required>
+          <option value="Select Genre" selected disabled>Select Genre</option>
+          <option value="Motivational">Motivational</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Novel">Novel</option>
+          <option value="Poetry">Poetry</option>
+          <option value="Narrative">Narrative</option>
+          <option value="Biography">Biography</option>
+          <option value="Memoir">Memoir</option>
+          <option value="Essay">Essay</option>
+          <option value="History">History</option>
+          <option value="Children's literature">Children's literature</option>
+          <option value="Humor">Humor</option>
+          <option value="Social science">Social science</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Short story">Short story</option>
+          <option value="Other">Other</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit" id="submit" />
+      </div>
+    </form>
+  </section>
+</main>
+<script type="module" src="/js/main.js"></script>
+{% endblock %}
